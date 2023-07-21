@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "27015:27015/udp"
+    volumes:
+      - ./config:/config
+      - ./saves:/saves
+    restart: unless-stopped
