@@ -5,7 +5,6 @@ ARG UID=1000
 ARG GID=1000
 ARG USER=barotrauma
 
-ARG STEAM_BETA
 ENV STEAM_APP_ID=1026340
 
 # Directories
@@ -32,7 +31,7 @@ RUN groupadd -g $GID $USER && \
 RUN steamcmd \
   +force_install_dir $HOME \
   +login anonymous \
-  +app_update $STEAM_APP_ID $STEAM_BETA validate \
+  +app_update $STEAM_APP_ID validate \
   +quit
 
 COPY default/serversettings.xml "$HOME/serversettings.xml"
