@@ -5,7 +5,6 @@
     </a>
       Dockerized Barotrauma server
     </h1>
-    <br/>
     <a href=https://github.com/super-bunny/barotrauma-server-docker/actions/workflows/docker_image.yml>
      <img alt="build" src="https://github.com/super-bunny/barotrauma-server-docker/actions/workflows/docker_image.yml/badge.svg?branch=master">
     </a>
@@ -23,6 +22,8 @@ docker run \
   --restart unless-stopped \
   ghcr.io/super-bunny/barotrauma-server:latest
 ```
+
+:warning: The server will update on every container start.
 
 If you want to access to configs and saves. You can mount volumes to `/config` and `/saves` respectively.
 
@@ -44,9 +45,7 @@ version: "3"
 
 services:
   server:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/super-bunny/barotrauma-server:latest
     ports:
       - "27015:27015/udp"
     volumes:
