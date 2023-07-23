@@ -1,12 +1,15 @@
-<div align="center">
-    <h1 align="center">
+<h1 align="center">
     <a href=https://barotraumagame.com/>
         <img width=100% src="docs/barotrauma_cover.png"/>
     </a>
-      Dockerized Barotrauma server
-    </h1>
+    Dockerized Barotrauma server
+</h1>
+
+<p align="center">Docker image that run Barotrauma dedicated server with auto update support</p>
+
+<div align="center">
     <a href=https://github.com/super-bunny/barotrauma-server-docker/actions/workflows/docker_image.yml>
-     <img alt="build" src="https://github.com/super-bunny/barotrauma-server-docker/actions/workflows/docker_image.yml/badge.svg?branch=master">
+        <img alt="build" src="https://github.com/super-bunny/barotrauma-server-docker/actions/workflows/docker_image.yml/badge.svg?branch=master">
     </a>
 </div>
 
