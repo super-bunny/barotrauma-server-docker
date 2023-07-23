@@ -8,10 +8,12 @@ cp -n \
   "$BASE_CONFIG_DIR"/karmasettings.xml \
   "$CONFIG_DIR"
 
+# Update server
 steamcmd \
   +force_install_dir "${HOME}" \
   +login anonymous \
   +app_update "${STEAM_APP_ID}" \
   +quit
 
+# Start server
 "${HOME}"/DedicatedServer
